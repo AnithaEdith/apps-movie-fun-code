@@ -8,6 +8,7 @@ Smoke Tests require server running on port 8080 by default.
 $ mvn clean package -DskipTests -Dmaven.test.skip=true
 ```
 
+
 ## Run Smoke Tests against specific URL
 
 ```
