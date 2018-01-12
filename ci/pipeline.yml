@@ -17,20 +17,11 @@ resources:
     skip_cert_check: true
 
 jobs:
-- name: test
-  public: true
-  plan:
-  - get: moviefun-source
-    trigger: true
-  - task: test
-    file: moviefun-source/ci/tasks/test.yml
-
 - name: deploy
   public: true
   plan:
   - get: moviefun-source
     trigger: true
-    passed: [test]
   - task: package
     file: moviefun-source/ci/tasks/package.yml
   - put: deploy-moviefun
@@ -38,13 +29,11 @@ jobs:
       manifest: moviefun-source/manifest.yml
       path: package-output/moviefun.war
 
-- name: smoke_test
+- name: test
   public: true
   plan:
   - get: moviefun-source
     trigger: true
     passed: [deploy]
-  - task: smoke_test
-    file: moviefun-source/ci/tasks/smoke-test.yml
-    params:
-      MOVIEFUN_URL:  https://attendee-service-goofy-intelligibleness.apps.cumuluslabs.io
+  - task: test
+    file: moviefun-source/ci/tasks/test.yml
