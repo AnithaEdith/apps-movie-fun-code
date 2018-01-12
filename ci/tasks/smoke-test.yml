@@ -1,0 +1,17 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ubuntu
+    tag: "latest"
+
+params:
+  ATTENDEE_SERVICE_URL:
+
+inputs:
+- name: attendee-service-source
+
+run:
+  path: attendee-service-source/ci/tasks/smoke-test.sh

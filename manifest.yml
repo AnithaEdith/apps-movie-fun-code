@@ -1,0 +1,10 @@
+applications:
+- name: moviefun
+  path: target/moviefun-1.1.0-SNAPSHOT.war
+  random-route: true
+#  host: attendee-jl
+  memory: 768M
+  instances: 1
+  buildpack: java_buildpack_offline
+  services:
+  - attendee-mysql

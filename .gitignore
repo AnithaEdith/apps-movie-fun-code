@@ -2,4 +2,5 @@
 target
 classes
 build
+private.yml
 .idea
