@@ -10,6 +10,7 @@ fi
 
 pushd moviefun-source
   echo "Running smoke tests for Attendee Service deployed at $MOVIE_FUN_URL"
+./mvnw clean compile > /dev/null
 ./mvnw test
 popd
 

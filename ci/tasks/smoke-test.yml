@@ -4,8 +4,8 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: ubuntu
-    tag: "latest"
+    repository: java 
+    tag: "8"
 
 params:
   MOVIE_FUN_URL: https://moviefun-strangest-crossrail.apps.cumuluslabs.io
