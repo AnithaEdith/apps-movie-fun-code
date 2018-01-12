@@ -3,14 +3,14 @@
 set -ex
 apt-get update && apt-get install -y curl
 
-if [ -z $MOVIEFUN_URL ]; then
-  echo “MOVIEFUN_URL not set"
+if [ -z $ATTENDEE_SERVICE_URL ]; then
+  echo "ATTENDEE_SERVICE_URL not set"
   exit 1
 fi
 
 pushd moviefun-source
-  echo "Running smoke tests for Attendee Service deployed at $MOVIEFUN_URL"
-  $ MOVIE_FUN_URL mvn test
+  echo "Running smoke tests for Attendee Service deployed at $ATTENDEE_SERVICE_URL"
+  $ATTENDEE_SERVICE_URL mvn test
 popd
 
 exit 0
