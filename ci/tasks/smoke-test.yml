@@ -8,7 +8,7 @@ image_resource:
     tag: "latest"
 
 params:
-  ATTENDEE_SERVICE_URL: https://moviefun-strangest-crossrail.apps.cumuluslabs.io
+  MOVIE_FUN_URL: https://moviefun-strangest-crossrail.apps.cumuluslabs.io
 
 inputs:
 - name: moviefun-source
