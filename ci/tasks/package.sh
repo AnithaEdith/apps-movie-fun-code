@@ -15,6 +15,5 @@ if [ $jar_count -gt 1 ]; then
 fi
 
 find moviefun-source/target -type f -name *.war -exec cp "{}" package-output/moviefun.war \;
-
 echo "Done packaging"
 exit 0
