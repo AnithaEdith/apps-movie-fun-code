@@ -36,4 +36,4 @@ jobs:
     trigger: true
     passed: [deploy]
   - task: test
-    file: moviefun-source/ci/tasks/test.yml
+    file: moviefun-source/ci/tasks/smoke-test.yml

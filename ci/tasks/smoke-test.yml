@@ -8,10 +8,10 @@ image_resource:
     tag: "latest"
 
 params:
-  ATTENDEE_SERVICE_URL:
+  ATTENDEE_SERVICE_URL: https://moviefun-strangest-crossrail.apps.cumuluslabs.io
 
 inputs:
-- name: attendee-service-source
+- name: moviefun-source
 
 run:
-  path: attendee-service-source/ci/tasks/smoke-test.sh
+  path: moviefun-source/ci/tasks/smoke-test.sh
