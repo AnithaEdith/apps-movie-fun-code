@@ -12,6 +12,12 @@ spring:
     suffix: .jsp
 
 s3:
-  accessKey: <access key id>
-  secretKey: <secret access key>
-  bucketName: <name of the bucket>
+  endpointUrl: http://127.0.0.1:9000
+  accessKey: MB6D93CI5YFU853U30X2
+  secretKey: 1ij833X/qO+HBUHCLAtILAcwXY1ybxz6zjDrsldZ
+  bucketName: moviefun
+
+logging.level:
+    root: INFO
+    org.superbiz.moviefun.albums: ERROR
+    org.superbiz.moviefun.movies: DEBUG

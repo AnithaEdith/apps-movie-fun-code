@@ -1,5 +1,7 @@
 package org.superbiz.moviefun;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.superbiz.moviefun.albums.Album;
@@ -13,6 +15,7 @@ import java.util.Map;
 
 @Controller
 public class HomeController {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private final MoviesBean moviesBean;
     private final AlbumsBean albumsBean;
